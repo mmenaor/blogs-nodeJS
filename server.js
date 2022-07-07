@@ -30,7 +30,9 @@ db.sync()
     .then(() => console.log('Database sync'))
     .catch(err => console.log(err));
 
+const PORT = process.env.PORT || 4000;
+
 // Habilitar la aplicación
-app.listen(4000, () => {
-    console.log('Express app running!!!');
+app.listen(PORT, () => {
+    console.log(`Express app running in PORT ${PORT}!!!`);
 });
